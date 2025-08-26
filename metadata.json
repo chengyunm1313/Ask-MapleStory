@@ -1,0 +1,5 @@
+{
+  "name": "問問冒險島",
+  "description": "一個讓使用者可以問為什麼，並得到解答的單頁網頁應用程式。使用者輸入問題後，點擊按鈕將問題發送至 Webhook，並等待回應顯示結果。",
+  "requestFramePermissions": []
+}
