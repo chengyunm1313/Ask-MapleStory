@@ -28,7 +28,14 @@
 3. 輸入儲存庫名稱並選擇設定
 4. 點擊 "Create repository"
 
-### 2. 推送程式碼到 GitHub
+### 2. 配置部署設定
+
+**重要：** 在部署前，請先更新以下檔案中的儲存庫名稱：
+
+1. **vite.config.ts** - 將 `您的儲存庫名稱` 替換為實際的儲存庫名稱
+2. **package.json** - 將 `homepage` 中的 `您的用戶名` 和 `您的儲存庫名稱` 替換為實際值
+
+### 3. 推送程式碼到 GitHub
 
 ```bash
 # 初始化 Git 儲存庫（如果尚未初始化）
@@ -47,7 +54,7 @@ git remote add origin https://github.com/您的用戶名/您的儲存庫名稱.g
 git push -u origin main
 ```
 
-### 3. 使用 GitHub Pages 部署（靜態網站）
+### 4. 使用 GitHub Pages 部署（靜態網站）
 
 #### 方法一：手動部署到 gh-pages 分支
 
@@ -91,7 +98,7 @@ npm run deploy
 4. 選擇 "gh-pages" 分支和 "/ (root)" 資料夾
 5. 點擊 "Save"
 
-### 4. 使用 Vercel 部署（推薦用於 Next.js 應用）
+### 5. 使用 Vercel 部署（推薦用於 React 應用）
 
 1. 前往 [Vercel](https://vercel.com) 並使用 GitHub 帳戶登入
 2. 點擊 "New Project"
@@ -99,7 +106,7 @@ npm run deploy
 4. 在環境變數設定中添加 `GEMINI_API_KEY`
 5. 點擊 "Deploy"
 
-### 5. 使用 Netlify 部署
+### 6. 使用 Netlify 部署
 
 1. 前往 [Netlify](https://netlify.com) 並登入
 2. 點擊 "New site from Git"
