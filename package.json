@@ -6,8 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:gh-pages": "NODE_ENV=production vite build",
     "preview": "vite preview",
-    "deploy": "npm run build && gh-pages -d dist"
+    "deploy": "npm run build:gh-pages && gh-pages -d dist"
   },
   "homepage": "https://chengyunm1313.github.io/Ask-MapleStory",
   "dependencies": {

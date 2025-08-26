@@ -1,10 +1,10 @@
 import path from 'path';
 import { defineConfig, loadEnv } from 'vite';
 
-export default defineConfig(({ mode }) => {
+export default defineConfig(({ mode, command }) => {
   const env = loadEnv(mode, '.', '');
   return {
-    base: process.env.NODE_ENV === 'production' ? '/Ask-MapleStory/' : '/',
+    base: command === 'build' ? '/Ask-MapleStory/' : '/',
     define: {
       'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY),
       'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY)
